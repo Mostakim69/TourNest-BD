@@ -11,9 +11,13 @@
 }
 
 body {
-  background: #f8fafc; /* slate-50 */
-  color: #1e293b; /* slate-800 */
   font-family: "Inter", sans-serif;
+  color: #f8fafc;
+  background: linear-gradient(to right, #d5dcf0, #89909c);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .flex-container {
@@ -22,9 +26,9 @@ body {
 .max-container {
   @apply max-w-7xl mx-auto;
 }
-.banner-container {
-  @apply lg:flex flex-row-reverse items-center   justify-center mx-auto gap-8  p-4   rounded-md;
-}
+/* .banner-container {
+  @apply lg:flex flex-row-reverse items-center justify-center mx-auto gap-8  p-4   rounded-md;
+} */
 .hover-effect {
   @apply hover:shadow-lg hover:border hover:border-amber-500 transition-all duration-200 ease-in-out;
 }

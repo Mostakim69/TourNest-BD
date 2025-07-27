@@ -15,7 +15,7 @@ const Brand = () => {
         }}
       >
         <img src="https://i.postimg.cc/mDZvzcKn/add5bd76e80a208f85d556937ebe8abe.jpg" alt="logo" className='h-6 rounded-full md:h-7' />
-        TourNest BD
+        <span className="hidden md:inline-block text-xl font-bold ml-2">TourNest BD</span>
       </motion.button>
     </div>
   );

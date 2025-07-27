@@ -6,7 +6,7 @@ const stats = [
   { label: "Packages", value: 100, suffix: "+" },
   { label: "Guides", value: 50, suffix: "+" },
   { label: "Districts", value: 25, suffix: "+" },
-  { label: "Bookings", value: 5000, suffix: "k+" },
+  { label: "Bookings", value: 3000, suffix: "+" },
 ];
 
 const LiveStats = () => {
