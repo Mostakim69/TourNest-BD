@@ -27,11 +27,11 @@ const Home = () => {
       <TrendingDestinations />
       <Stories apiEndpoint="stories" />
       <LiveStats />
-      <Testimonials />
       <HowItWorks />
       <WhyChooseUs />
       <Faqs />
       <CallToActionFull />
+      <Testimonials />
       <NewsletterSignup />
     </div>
   );

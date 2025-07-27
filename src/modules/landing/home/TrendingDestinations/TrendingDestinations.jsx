@@ -45,9 +45,9 @@ const TrendingDestinations = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {trendingSpots.map((spot, i) => (
-            <div data-aos="flip-left">
+            <div key={spot.name} data-aos="flip-left">
               <motion.div
-                key={spot.name}
+                
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.15, duration: 0.6 }}

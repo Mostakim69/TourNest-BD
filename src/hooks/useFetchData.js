@@ -18,8 +18,10 @@ const useFetchData = (endpoint, query = {}) => {
         });
         setData(res.data?.data);
       } catch (err) {
-        console.error("Fetch error:", err);
-      } finally {
+        if (err.code !== "ERR_CANCELED") {
+          console.error("Fetch error:", err);
+        }
+      }  finally {
         setLoading(false);
       }
     };

@@ -1,6 +1,5 @@
-// src/loggerClient.js
-
 export function setupClientLogging() {
+  // Capture and send JavaScript errors to the server in development mode
   window.addEventListener("error", (event) => {
     if (import.meta.env.DEV) {
       fetch("/__error", {
@@ -13,6 +12,7 @@ export function setupClientLogging() {
     }
   });
 
+  // Capture and send unhandled promise rejections to the server in development mode
   window.addEventListener("unhandledrejection", (event) => {
     if (import.meta.env.DEV) {
       fetch("/__error", {
@@ -25,9 +25,10 @@ export function setupClientLogging() {
     }
   });
 
+  // Override console.log to send logs to the server in development mode while preserving browser console output
   const originalLog = console.log;
   console.log = (...args) => {
-    originalLog(...args); // still show in browser console
+    originalLog(...args);
 
     if (import.meta.env.DEV) {
       fetch("/__log", {

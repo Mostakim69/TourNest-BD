@@ -41,7 +41,7 @@ const Testimonials = () => {
                     className="size-12 rounded-full object-cover border-2 border-indigo-100"
                     src={card.image}
                     alt={`${card.name}'s profile`}
-                    loading="lazy"
+                    
                 />
                 <div className="flex flex-col">
                     <div className="flex items-center gap-1.5">
