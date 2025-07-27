@@ -6,7 +6,7 @@ const BookingCard = ({ booking }) => {
   return (
     <div
       key={booking._id}
-      className="relative p-6 rounded-2xl bg-gradient-to-br from-[#111827] to-[#1f2937] border border-indigo-700 shadow-[0_0_25px_#6366f1aa] glow-border pulse-glow transition-transform duration-300 hover:scale-[1.04] cursor-default"
+      className="relative bg-[#d5dcf0] p-6 rounded-2xl border border-indigo-700 shadow-[0_0_25px_#6366f1aa] glow-border pulse-glow transition-transform duration-300 hover:scale-[1.04] cursor-default"
       data-aos="fade-right"
     >
       {/* Status Badge */}
