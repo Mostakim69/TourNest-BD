@@ -11,10 +11,11 @@
 }
 
 body {
+  background: #f8fafc; /* slate-50 */
+  color: #1e293b; /* slate-800 */
   font-family: "Inter", sans-serif;
-  color: #f8fafc; /* slate-300 */
-  background: linear-gradient(to right, #0f172a, #1e293b);  /* slate-900 from Tailwind */
 }
+
 .flex-container {
   @apply flex  items-center justify-center;
 }

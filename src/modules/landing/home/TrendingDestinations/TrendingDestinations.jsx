@@ -29,7 +29,7 @@ const trendingSpots = [
 
 const TrendingDestinations = () => {
   return (
-    <section className="bg-[#0b1120] py-20 px-4 text-white">
+    <section className=" py-20 px-4 text-white">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

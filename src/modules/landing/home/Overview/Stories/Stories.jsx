@@ -21,7 +21,7 @@ const Stories = ({ apiEndpoint }) => {
 
   return (
     <section
-      className="px-4 py-16 bg-[#0f172a] text-white"
+      className="px-4 py-16"
       data-aos="fade-up-left"
     >
       <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-sky-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent drop-shadow-xl animate-pulse">
