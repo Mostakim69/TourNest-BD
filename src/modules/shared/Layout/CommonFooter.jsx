@@ -77,7 +77,7 @@ const CommonFooter = () => {
   };
 
   return (
-    <footer className="text-gray-500 bg-gray-900 pt-8 px-6 md:px-14 lg:px-20 xl:px-32 font-Outfit">
+    <footer className="text-gray-500 bg-gray-900 pt-8 px-6 md:px-8 lg:px-10 xl:px-20 font-Outfit">
       <div className="flex flex-wrap justify-between gap-12 md:gap-8 lg:gap-12">
         {/* Brand Section */}
         <div className="max-w-80">

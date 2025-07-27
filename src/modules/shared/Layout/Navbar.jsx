@@ -12,7 +12,7 @@ const Navbar = () => {
   const { user } = useAuth();
 
   return (
-    <motion.nav {...topToBottom} className="navbar max-container ">
+    <motion.nav {...topToBottom} className="navbar px-10 max-container ">
       {/* Left Section */}
       <div className="navbar-start">
         <div className="dropdown dropdown-right lg:hidden">
