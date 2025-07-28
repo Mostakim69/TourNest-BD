@@ -39,7 +39,7 @@ const NewsletterSignup = () => {
       <div className="flex flex-col items-center gap-8 max-w-3xl mx-auto" data-aos="fade-up">
         {/* Text Section */}
         <div className="text-center space-y-4">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-14 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse">
             Stay in the Loop
           </h1>
           <p className="text-base text-white max-w-2xl mx-auto">

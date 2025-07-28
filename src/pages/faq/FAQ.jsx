@@ -22,7 +22,7 @@ const FAQs = () => {
       className="max-w-5xl mx-auto px-4 py-20 text-white space-y-12"
       data-aos="fade-in" // Use AOS attribute directly
     >
-      <h2 className="text-2xl md:text-4xl font-extrabold text-center bg-gradient-to-r from-sky-400 via-indigo-400 to-violet-500 bg-clip-text text-transparent drop-shadow-lg">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-14 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse">
         <TypewriterText
           words={[
             "💡 Frequently Asked Questions",

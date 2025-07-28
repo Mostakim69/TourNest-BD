@@ -8,7 +8,7 @@ const CallToActionFull = () => {
       {/* Marquee Heading */}
       <div className="opacity-20 absolute top-0 left-0 w-full z-0 pointer-events-none">
         <Marquee gradient={false} speed={50}>
-          <h1 className="text-[clamp(60px,10vw,100px)] font-extrabold text-blue-400 whitespace-nowrap">
+          <h1 className="text-[clamp(60px,10vw,100px)] font-extrabold text-gray-900 whitespace-nowrap">
             TourNest BD • Explore • Discover • Travel •
           </h1>
         </Marquee>
@@ -23,7 +23,7 @@ const CallToActionFull = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-600 drop-shadow-md"
+          className="text-3xl md:text-4xl font-extrabold text-center mb-14 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse"
         >
           Discover Bangladesh Like Never Before
         </motion.h2>

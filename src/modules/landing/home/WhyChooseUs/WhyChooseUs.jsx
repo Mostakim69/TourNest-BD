@@ -36,7 +36,7 @@ const reasons = [
 const WhyChooseUs = () => {
   return (
     <section className=" text-white py-20 px-4">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-14 bg-gradient-to-r from-sky-400 via-purple-500 to-pink-400 bg-clip-text text-transparent drop-shadow-xl animate-pulse">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-14 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse">
         🌟 Why Choose TourNest BD?
       </h2>
 
