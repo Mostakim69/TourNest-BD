@@ -20,6 +20,7 @@
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",
     "firebase": "^11.8.1",
+    "firebase-admin": "^13.4.0",
     "k-form": "^1.0.3",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.513.0",
