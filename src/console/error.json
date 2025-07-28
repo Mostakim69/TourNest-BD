@@ -1,0 +1,4 @@
+[2025-07-28T21:25:27.587Z] Unhandled Promise Rejection: {
+  "message": "You have an in-flight confirmCardPayment! Please be sure to disable your form submit button when confirmCardPayment is called.",
+  "name": "IntegrationError"
+}
