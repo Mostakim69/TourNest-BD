@@ -12,6 +12,7 @@ import dashbourdRoutes from "../modules/Dashbaord/dashbourdRoutes";
 import ProtectedRoute from "./ProtectedRoute";
 import Packages from "../modules/Packages/Packages/Packages";
 import Stories from "../modules/landing/home/Overview/Stories/Stories";
+import About from "../pages/About/About";
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path: "about-us",
-        element: <div>About</div>,
+        element: <About/>,
       },
       {
         path: "community",
