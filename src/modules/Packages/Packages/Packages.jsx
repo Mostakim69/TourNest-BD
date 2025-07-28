@@ -16,7 +16,7 @@ const Packages = ({ apiEndpoint }) => {
       </h2>
       <p className="text-lg justify-center items-center text-center mb-8 ">Our Featured Packages offer handpicked travel experiences across Bangladesh's most stunning <br />destinations. Each package is crafted for comfort, adventure, and unforgettable memories.</p>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         {loading ? (
           <Spinner />
         ) : (

@@ -29,7 +29,7 @@ const About = () => {
   ];
 
   return (
-    <section className="bg-amber-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8" aria-labelledby="about-heading">
+    <section className=" min-h-screen py-12 px-4 sm:px-6 lg:px-8" aria-labelledby="about-heading">
       <h2 id="about-heading" className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10">
         Meet the Developer
       </h2>

@@ -50,7 +50,7 @@ const NewsletterSignup = () => {
         {/* Form Section */}
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-xl"
+          className="flex flex-col sm:flex-row items-center justify-center w-full max-w-xl"
           noValidate
         >
           <input
@@ -65,7 +65,7 @@ const NewsletterSignup = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 active:scale-95 transition-all disabled:bg-blue-400 disabled:cursor-not-allowed font-medium"
+            className="w-full h-12 rounded-lg sm:w-auto px-8 py-3 btn btn-primary active:scale-95 transition-all disabled:bg-blue-500 disabled:cursor-not-allowed font-medium"
           >
             {loading ? "Submitting..." : "Subscribe"}
           </button>

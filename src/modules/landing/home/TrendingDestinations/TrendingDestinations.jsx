@@ -9,19 +9,19 @@ const trendingSpots = [
   },
   {
     name: "🏞️ Sajek Valley",
-    image: "https://i.pinimg.com/736x/cc/7b/38/cc7b389b5c840e39854cf76417a7116a.jpg",
+    image: "https://i.postimg.cc/rpkLVsdY/d97a66dfec26dc80779f3fe69588a61f.jpg",
     description:
       "A dreamy mountain valley in Rangamati with endless green, cloud-kissed mornings, and wooden cottages.",
   },
   {
     name: "🏖️ Cox’s Bazar",
-    image: "https://i.pinimg.com/736x/cc/7b/38/cc7b389b5c840e39854cf76417a7116a.jpg",
+    image: "https://i.postimg.cc/vT6dDxWJ/f67b870ee960026e2c031ce7c44cd906.jpg",
     description:
       "Home to the world’s longest sea beach, perfect for beach lovers, surfers, and seafood enthusiasts.",
   },
   {
     name: "🌲 Bandarban",
-    image: "https://i.pinimg.com/736x/cc/7b/38/cc7b389b5c840e39854cf76417a7116a.jpg",
+    image: "https://i.postimg.cc/0NBF6Nrs/360-F-360905134-TVGIy0-ZKOQVmx-OR9q-E3du-Jlv-TBBEWv8p.jpg",
     description:
       "Adventure-packed hills, waterfalls, tribal villages, and peaceful trekking through nature’s best.",
   },
