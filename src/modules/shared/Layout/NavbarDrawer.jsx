@@ -20,12 +20,12 @@ const NavbarDrawer = () => {
         : touristLinks;
 
   return (
-    <div className="drawer lg:drawer-open bg-gray-950 text-gray-200">
+    <div className="drawer lg:drawer-open text-gray-200">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
 
       {/* Top Navbar */}
       <div className="drawer-content flex flex-col">
-        <div className="w-full p-4 border-b border-gray-700 flex justify-between items-center bg-gray-900 shadow-lg shadow-indigo-800/20 sticky top-0 z-40">
+        <div className="w-full p-4 border-b bg-gray-700 flex justify-between items-center shadow-lg shadow-indigo-800/20 sticky top-0 z-40">
           <label
             htmlFor="my-drawer-3"
             className="btn btn-sm bg-indigo-700 text-white lg:hidden border border-indigo-500 hover:bg-indigo-600"
@@ -55,7 +55,7 @@ const NavbarDrawer = () => {
       {/* Sidebar */}
       <div className="drawer-side z-50" data-aos="fade-down-right">
         <label htmlFor="my-drawer-3" className="drawer-overlay" />
-        <ul className="menu p-4 w-80 min-h-full bg-gray-900 border-r border-indigo-800 space-y-3 overflow-y-auto">
+        <ul className="menu p-4 w-80 min-h-full bg-gray-700 border-r border-indigo-800 space-y-3 overflow-y-auto">
           {/* Home Link */}
           <li data-aos="fade-right" data-aos-delay="100">
             <SidebarLink

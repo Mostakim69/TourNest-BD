@@ -6,10 +6,6 @@ export const navItems = [
     path: "/",
   },
   {
-    name: "Dashboard",
-    path: "/dashboard",
-  },
-  {
     name: "All Trips",
     path: "/all-trips",
   },
@@ -21,6 +17,10 @@ export const navItems = [
   {
     name: "About Us",
     path: "/about-us",
+  },
+  {
+    name: "Dashboard",
+    path: "/dashboard",
   },
 ];
 
