@@ -53,7 +53,7 @@ const SignUpForm = () => {
       darkSwal.fire({
         icon: "success",
         title: "Account Created",
-        text: "Welcome to DeshGuide!",
+        text: "Welcome to TourNest BD!",
         timer: 2000,
         showConfirmButton: false,
       });

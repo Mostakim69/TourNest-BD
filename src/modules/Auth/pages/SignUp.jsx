@@ -12,11 +12,11 @@ import {
 const SignUp = () => {
   return (
     <div className="min-h-[85vh] mt-10 px-4 py-12 rounded-2xl bg-gradient-to-br from-[#0e0e1c] via-[#11111f] to-[#0e0e1c] shadow-xl border border-[#1d1d2f] relative z-10">
-      <UseHelmet title="Sign up - DeshGuide" />
+      <UseHelmet title="Sign up - TourNest BD" />
 
       <motion.div className="max-w-xl mx-auto text-center" {...bottomToTop}>
         <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent drop-shadow-sm">
-          DeshGuide empowers your travel journey.
+          TourNest BD empowers your travel journey.
         </h2>
         <p className="text-gray-400 text-sm mt-2">
           Sign up to explore exciting destinations, connect with local guides,

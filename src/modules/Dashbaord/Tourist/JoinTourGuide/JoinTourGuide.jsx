@@ -68,7 +68,7 @@ const JoinTourGuide = () => {
           Ready to Guide the World?
         </h1>
         <p className="mt-4 text-lg text-gray-300 leading-relaxed">
-          Join DeshGuide as a certified tour guide and lead unforgettable
+          Join TourNest BD as a certified tour guide and lead unforgettable
           journeys. Submit your profile below — passion and authenticity matter
           most.
         </p>

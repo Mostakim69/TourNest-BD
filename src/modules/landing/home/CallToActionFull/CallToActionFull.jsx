@@ -34,7 +34,7 @@ const CallToActionFull = () => {
           transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
           className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed"
         >
-          ✈️ Uncover hidden gems, connect with expert guides, and craft unforgettable adventures with DeshGuide.
+          ✈️ Uncover hidden gems, connect with expert guides, and craft unforgettable adventures with TourNest BD.
         </motion.p>
 
         <motion.div
