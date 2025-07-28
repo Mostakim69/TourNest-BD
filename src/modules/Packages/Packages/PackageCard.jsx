@@ -16,7 +16,6 @@ const PackageCard = ({ pkg }) => {
       </figure>
       <div className="card-body">
         <h3 className="text-xl font-bold">{pkg.title}</h3>
-        <p className="text-sm text-gray-300">{pkg.description}</p>
         <div className="flex flex-wrap gap-3 text-sm my-2">
           <span className="badge badge-accent">{pkg.tripType}</span>
           <span className="badge badge-secondary">{pkg.days} Days</span>

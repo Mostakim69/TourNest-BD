@@ -53,10 +53,10 @@ export default function Overview() {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-[#00FFC6] drop-shadow-lg">
+        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
           What is TourNest BD ?
         </h2>
-        <p className="text-gray-400 text-lg mb-12 max-w-3xl mx-auto">
+        <p className=" text-lg mb-12 max-w-3xl mx-auto">
           <span className="text-white font-semibold">TourNest BD</span> is a
           modern tourism platform connecting travelers, guides, and
           storytellers—crafted for seamless discovery, booking, and sharing.
