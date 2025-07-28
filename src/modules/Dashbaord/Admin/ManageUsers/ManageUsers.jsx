@@ -32,16 +32,14 @@ const ManageUsers = () => {
   });
 
   return (
-    <div className="p-4 text-white">
-      <h1 className="text-3xl font-bold mb-6 text-white glow-text">
-        Manage Users
-      </h1>
+    <div className="p-6 md:p-10 min-h-screen text-white">
+      <h1 className="text-3xl font-bold mb-8 text-white">Manage Users</h1>
 
       <div className="flex flex-col md:flex-row gap-4 mb-6 items-start md:items-center">
         <input
           type="text"
           placeholder="Search by name or email"
-          className="bg-[#1e1e2e] border border-gray-600 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 w-full md:w-1/2 hover:glow-border transition"
+          className="bg-slate-800 border border-slate-600 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full md:w-1/2"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -54,11 +52,11 @@ const ManageUsers = () => {
             className="text-black"
             classNames={{
               control: () =>
-                "!bg-[#1e1e2e] !border-gray-600 !text-white !rounded-md",
-              menu: () => "!bg-[#1e1e2e]",
-              singleValue: () => "!text-white",
+                "bg-slate-800 border border-slate-600 text-white rounded-md",
+              menu: () => "bg-slate-800",
+              singleValue: () => "text-white",
               option: ({ isFocused }) =>
-                isFocused ? "!bg-purple-700 !text-white" : "!text-white",
+                isFocused ? "bg-indigo-600 text-white" : "text-white",
             }}
           />
         </div>
@@ -69,19 +67,19 @@ const ManageUsers = () => {
       ) : isError ? (
         <p className="text-red-500">Failed to load users.</p>
       ) : (
-        <div className="overflow-x-auto glow-border rounded-xl">
-          <table className="table-auto w-full border border-gray-700 text-white text-sm md:text-base">
+        <div className="overflow-x-auto rounded-xl shadow-lg border border-slate-700">
+          <table className="table-auto w-full text-sm md:text-base">
             <thead>
-              <tr className="bg-gradient-to-r from-[#1e1e2e] to-[#2a2a40] text-purple-400">
-                <th className="p-2 border">#</th>
-                <th className="p-2 border">Name</th>
-                <th className="p-2 border">Email</th>
-                <th className="p-2 border">Role</th>
+              <tr className="bg-gradient-to-r from-slate-800 to-slate-700 text-indigo-300">
+                <th className="p-3 border border-slate-600">#</th>
+                <th className="p-3 border border-slate-600">Name</th>
+                <th className="p-3 border border-slate-600">Email</th>
+                <th className="p-3 border border-slate-600">Role</th>
               </tr>
             </thead>
             <tbody>
               {users.map((user, idx) => (
-                <UsersRow user={user} idx={idx} />
+                <UsersRow key={user._id} user={user} idx={idx} />
               ))}
             </tbody>
           </table>

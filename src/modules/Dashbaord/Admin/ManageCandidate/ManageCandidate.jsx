@@ -71,7 +71,7 @@ const ManageCandidate = () => {
 
   return (
     <motion.div
-      className="max-w-5xl mx-auto mt-10 p-6 bg-[#0f172a] text-white rounded-xl border border-indigo-800 glow-border shadow-2xl"
+      className="max-w-5xl mx-auto mt-10 p-6 text-white rounded-xl shadow-2xl"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
     >
