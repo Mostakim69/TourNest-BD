@@ -1,7 +1,26 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router";
+import { FacebookShareButton, FacebookIcon } from "react-share";
+import Swal from "sweetalert2";
+import useAuth from "../../../../../hooks/useAuth";
 
 const StoryCard = ({ story }) => {
+  const { user } = useAuth();
+  const shareUrl = `${window.location.origin}/community/${story._id}`; // Adjust this URL as needed
+  console.log(shareUrl, "shareurl StoryCard.jsx", 10);
+
+  const handleShareClick = () => {
+    if (!user) {
+      Swal.fire({
+        title: "Login Required",
+        text: "You need to be logged in to share stories",
+        icon: "info",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#6366f1",
+      });
+    }
+  };
+
   return (
     <div>
       <motion.div
@@ -29,18 +48,40 @@ const StoryCard = ({ story }) => {
             {story.description}
           </p>
 
-          <div className="flex items-center gap-3 pt-4 mt-auto">
-            <img
-              src={story?.userPhoto || "https://avatar.iran.liara.run/public"}
-              className="w-11 h-11 rounded-full border-[2px] border-purple-500 shadow-md"
-            />
-            <div>
-              <p className="font-semibold text-violet-300 hover:text-sky-400 transition-colors duration-200">
-                {story.userName}
-              </p>
-              <p className="text-xs text-gray-400">
-                {new Date(story.createdAt).toLocaleString()}
-              </p>
+          <div className="flex items-center justify-between pt-4 mt-auto">
+            <div className="flex items-center gap-3">
+              <img
+                src={story?.userPhoto || "https://avatar.iran.liara.run/public"}
+                className="w-11 h-11 rounded-full border-[2px] border-purple-500 shadow-md"
+              />
+              <div>
+                <p className="font-semibold text-violet-300 hover:text-sky-400 transition-colors duration-200">
+                  {story.userName}
+                </p>
+                <p className="text-xs text-gray-400">
+                  {new Date(story.createdAt).toLocaleString()}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-2">
+
+              {user ? (
+                <FacebookShareButton
+                  url={shareUrl}
+                  quote={`Check out this travel story: ${story.title}`}
+                  className="flex items-center"
+                >
+                  <FacebookIcon size={32} round />
+                </FacebookShareButton>
+              ) : (
+                <button
+                  onClick={handleShareClick}
+                  className="p-1 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors"
+                >
+                  <FacebookIcon size={32} round />
+                </button>
+              )}
             </div>
           </div>
         </div>

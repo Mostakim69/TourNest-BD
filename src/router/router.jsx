@@ -7,7 +7,7 @@ import PackageDetails from "../modules/Packages/PackageDetails/PackageDetails";
 import Home from "../modules/landing/home/Home";
 import GuideProfile from "../modules/Dashbaord/TourGuides/GuideProfile/GuideProfile";
 import TourGuides from "../modules/Dashbaord/TourGuides/TourGuides";
-import CommunityPage from "../pages/Community/CommunityPage";
+// import CommunityPage from "../pages/Community/CommunityPage";
 import dashbourdRoutes from "../modules/Dashbaord/dashbourdRoutes";
 import ProtectedRoute from "./ProtectedRoute";
 import Packages from "../modules/Packages/Packages/Packages";
@@ -52,12 +52,12 @@ const router = createBrowserRouter([
         path: "about-us",
         element: <About/>,
       },
+      // {
+      //   path: "community",
+      //   element: <CommunityPage />,
+      // },
       {
         path: "community",
-        element: <CommunityPage />,
-      },
-      {
-        path: "all-stories",
         element: <Stories apiEndpoint="stories?limit=0" />,
       },
     ],

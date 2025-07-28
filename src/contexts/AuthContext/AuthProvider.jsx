@@ -68,17 +68,6 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
 
       setLoading(false);
-
-      /* if (currentUser?.email) {
-        axios
-          .post(
-            "http://localhost:5000/api/v1/auth/create-jwt",
-            { email: currentUser.email },
-            { withCredentials: true },
-          )
-          .then((res) => console.log(res.data))
-          .catch((error) => console.log(error));
-      } */
     });
 
     return () => cleanUp();

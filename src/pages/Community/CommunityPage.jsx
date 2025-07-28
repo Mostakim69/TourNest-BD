@@ -1,5 +1,6 @@
 import { FacebookShareButton } from 'react-share';
 import { useNavigate } from 'react-router';
+import Swal from 'sweetalert2'; // Import SweetAlert2
 
 const CommunityPage = () => {
   const navigate = useNavigate();
@@ -52,14 +53,26 @@ const CommunityPage = () => {
 
   const handleShareClick = (e, url) => {
     if (!isLoggedIn) {
-      e.preventDefault(); // stop popup
-      navigate('/login');
+      e.preventDefault(); // Stop the default share action
+      // Show SweetAlert2 alert
+      Swal.fire({
+        title: 'Login Required',
+        text: 'Please log in to share this story on Facebook.',
+        icon: 'warning',
+        confirmButtonText: 'Go to Login',
+        cancelButtonText: 'Cancel',
+        showCancelButton: true,
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate('/login'); // Redirect to login page
+        }
+      });
     }
   };
 
   return (
     <div style={{ padding: '20px', textAlign: 'center' }}>
-      <h1 className=' text-3xl md:text-4xl font-extrabold text-center mb-4 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse'>Community Stories</h1>
+      <h1 className='text-3xl md:text-4xl font-extrabold text-center mb-4 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse'>Community Stories</h1>
       <p className='text-sm mb-8'>Explore our community stories and share your own adventures with us!</p>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', maxWidth: '1100px', margin: '0 auto' }}>
