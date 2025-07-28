@@ -6,7 +6,6 @@ import Signout from "../../Auth/components/Signout";
 import Brand from "../ui/Brand";
 import Avatar from "../ui/Avatar";
 import navbarLinks from "./navbarLinksConstant";
-import DropDown from "../ui/DropDown";
 
 const Navbar = () => {
   const { user } = useAuth();
@@ -54,11 +53,9 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex items-center gap-4">
-            <DropDown>
               <Avatar />
-            </DropDown>
             <Signout>
-              <button className="px-4 py-2 rounded-full bg-[#00FF9C]/50 text-black font-semibold hover:scale-105 hover:shadow-[0_0_12px_#00FF9C] transition-all duration-200">
+              <button className="px-4 py-2 rounded-full bg-[#00BFFF] text-black font-semibold hover:scale-105 hover:shadow-[0_0_12px_#00FF9C] transition-all duration-200">
                 Sign Out
               </button>
             </Signout>
@@ -66,7 +63,7 @@ const Navbar = () => {
         ) : (
           <Link
             to="/auth/signin"
-            className="px-4 py-2 rounded-lg bg-[#00BFFF] text-black font-semibold hover:scale-105 hover:shadow-[0_0_12px_#00BFFF] transition-all duration-200"
+            className="px-4 py-2 rounded-lg btn btn-primary text-black font-semibold hover:scale-105 hover:shadow-[0_0_12px_#00BFFF] transition-all duration-200"
           >
             Sign In
           </Link>

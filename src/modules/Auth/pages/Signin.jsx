@@ -12,7 +12,7 @@ import UseHelmet from "../../../hooks/useHelmet";
 
 const Signin = () => {
   return (
-    <div className="min-h-[85vh] mt-10 px-4 py-12 bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] rounded-2xl shadow-xl glow-border pulse-glow">
+    <div className="min-h-[85vh] mt-10 justify-center items-center px-4 py-12  rounded-2xl shadow-xl pulse-glow">
       <UseHelmet title="Sign in" />
 
       {/* Heading */}

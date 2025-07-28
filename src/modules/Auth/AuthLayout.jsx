@@ -1,6 +1,5 @@
 import { Outlet } from "react-router";
 import { Navbar } from "../shared/Layout";
-import AuthSidebar from "./components/AuthSidebar";
 
 const AuthLayout = () => {
   return (
@@ -11,7 +10,7 @@ const AuthLayout = () => {
           <Outlet />
         </div>
         <div className="max-xl:hidden col-span-3 order border-red-500 mt-10 sticky top-[7rem] max-h-[calc(100vh-9rem)] overflow-y-auto">
-          <AuthSidebar />
+          
         </div>
       </div>
     </div>
