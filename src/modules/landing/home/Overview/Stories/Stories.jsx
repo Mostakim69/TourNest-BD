@@ -19,6 +19,9 @@ const Stories = ({ apiEndpoint }) => {
     return <Spinner />;
   }
 
+  // Limit to 4 stories unless on the all-stories page
+  const displayedStories = isStoriesPage ? stories : stories.slice(0, 4);
+
   return (
     <section
       className="px-4 py-16"
@@ -28,8 +31,8 @@ const Stories = ({ apiEndpoint }) => {
         🌌 Traveler Stories
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
-        {stories.map((story) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto">
+        {displayedStories.map((story) => (
           <StoryCard key={story._id} story={story} />
         ))}
       </div>
