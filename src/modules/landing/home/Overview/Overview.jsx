@@ -53,7 +53,7 @@ export default function Overview() {
         viewport={{ once: true }}
         className="max-w-6xl mx-auto text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse">
           What is TourNest BD ?
         </h2>
         <p className=" text-lg mb-12 max-w-3xl mx-auto">

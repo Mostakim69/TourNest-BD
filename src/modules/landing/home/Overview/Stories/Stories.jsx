@@ -24,7 +24,7 @@ const Stories = ({ apiEndpoint }) => {
       className="px-4 py-16"
       data-aos="fade-up-left"
     >
-      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12 bg-gradient-to-r from-sky-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent drop-shadow-xl animate-pulse">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-14 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse">
         🌌 Traveler Stories
       </h2>
 

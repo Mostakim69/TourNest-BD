@@ -35,11 +35,11 @@ const TrendingDestinations = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-extrabold mb-2 bg-gradient-to-r from-fuchsia-400 via-sky-400 to-purple-500 bg-clip-text text-transparent animate-pulse drop-shadow-lg"
+          className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse"
         >
           🔥 Trending Destinations
         </motion.h2>
-        <p className="text-gray-400 text-lg mb-12 max-w-xl mx-auto">
+        <p className="text-lg mb-8 max-w-xl mx-auto">
           Discover the most loved destinations by our travelers this week.
         </p>
 

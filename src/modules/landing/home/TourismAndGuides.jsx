@@ -11,7 +11,7 @@ const TourismAndGuides = () => {
   console.log(packages, "TourismAndGuides.jsx", 7);
   return (
     <section className="px-4 py-10 max-w-7xl mx-auto">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-primary">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse">
         Our Featured Packages
       </h2>
 
