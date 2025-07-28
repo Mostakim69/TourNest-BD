@@ -3,22 +3,22 @@ import React from 'react';
 const About = () => {
   const projects = [
     {
-      title: 'Travel Explorer',
-      description: 'A travel booking platform featuring destinations, packages, and user reviews.',
-      github: 'https://github.com/majedul2311/travel-explorer',
-      demo: 'https://travel-explorer-demo.com',
+      title: 'Friend Assign',
+      description: 'Website Theme⭐ Online Group-Study assignment In this assignment, you will build a web application for online group study with friends (Every registered user is a friend of others). Users can create assignments, complete them, and grade their friends assignments.',
+      github: 'https://github.com/Mostakim69/FriendAssign',
+      demo: 'https://assignmen-11-app.web.app/',
     },
     {
-      title: 'Food Gallery',
-      description: 'A recipe and food review platform with authentication and admin panel.',
-      github: 'https://github.com/majedul2311/food-gallery',
-      demo: 'https://food-gallery-demo.com',
+      title: 'Hobby Hub',
+      description: "HobbyHub is a platform where people can discover and join local hobby-based groups (e.g., book clubs, hiking crews, painting circles) or create their own. It encourages social engagement through shared interests, helping people build communities around their passions.",
+      github: 'https://github.com/Mostakim69/HobbyHub',
+      demo: 'https://happy-family-4d585.web.app/',
     },
     {
-      title: 'E-commerce Store',
-      description: 'Fully functional e-commerce site with cart, payments, and dashboard features.',
-      github: 'https://github.com/majedul2311/ecommerce-store',
-      demo: 'https://ecommerce-store-demo.com',
+      title: 'Health Care',
+      description: "🏥 Medical Appointment Booking Application Build A React-based web application for scheduling and managing doctor appointments. The application includes multiple pages, data persistence, interactive UI elements, routing, and visual representation using charts.",
+      github: 'https://github.com/Mostakim69/HealthCare',
+      demo: 'https://peaceful-sunflower-7c0320.netlify.app/',
     },
   ];
 
