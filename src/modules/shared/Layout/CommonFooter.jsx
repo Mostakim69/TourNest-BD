@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 import { FaFacebook, FaYoutube, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa';
 
 const CommonFooter = () => {
@@ -7,7 +8,6 @@ const CommonFooter = () => {
   const [error, setError] = useState('');
 
   const socialLinks = [
-
     {
       name: 'GitHub',
       icon: <FaGithub size={24} />,
@@ -36,11 +36,26 @@ const CommonFooter = () => {
   ];
 
   const companyLinks = [
-    { name: 'About', url: '/' },
-    { name: 'Careers', url: '/' },
-    { name: 'Press', url: '/' },
-    { name: 'Blog', url: '/' },
-    { name: 'Partners', url: '/' },
+    {
+      name: 'Home',
+      path: '/',
+    },
+    {
+      name: 'All Trips',
+      path: '/all-trips',
+    },
+    {
+      name: 'Community',
+      path: '/community',
+    },
+    {
+      name: 'About Us',
+      path: '/about-us',
+    },
+    {
+      name: 'Dashboard',
+      path: '/dashboard',
+    },
   ];
 
   const supportLinks = [
@@ -90,7 +105,7 @@ const CommonFooter = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Follow us on ${link.name}`}
-                className=" hover:text-white transition-colors"
+                className="hover:text-white transition-colors"
               >
                 {link.icon}
               </a>
@@ -104,13 +119,13 @@ const CommonFooter = () => {
           <ul className="mt-3 flex flex-col gap-2 text-sm">
             {companyLinks.map((link) => (
               <li key={link.name}>
-                <a
-                  href={link.url}
+                <Link
+                  to={link.path} // Use 'to' instead of 'href' for react-router-dom
                   className="hover:text-white transition-colors"
                   aria-label={link.name}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
