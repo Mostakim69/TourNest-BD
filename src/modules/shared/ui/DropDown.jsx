@@ -65,11 +65,11 @@ const DropDown = ({ children }) => {
                     <h3 className="text-sm font-medium glow-text">User</h3>
                 </div>
 
-                {links.map((link, i) => (
+                {links.map((link, i) =>  (
 
 
                     <Link
-                        to={link.path}
+                        to={link.path} key={i}
                         className="flex items-center gap-3 px-4 py-3 transition-all duration-200 hover:bg-indigo-500/10 rounded-lg"
                     >
                         <span className="text-sm group-hover:glow-text">{link.name}</span>
