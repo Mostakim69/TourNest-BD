@@ -16,13 +16,13 @@ import axios from "axios";
 const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
-  const googleProvder = new GoogleAuthProvider();
+  const googleProvider = new GoogleAuthProvider();
 
   const githubProvider = new GithubAuthProvider();
 
   const googleSignIn = () => {
     setLoading(true);
-    return signInWithPopup(auth, googleProvder);
+    return signInWithPopup(auth, googleProvider);
   };
   const githubSignIn = () => {
     setLoading(true);

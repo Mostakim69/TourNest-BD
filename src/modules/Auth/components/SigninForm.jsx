@@ -103,7 +103,7 @@ const SigninForm = () => {
 
         <p className="text-sm text-center text-gray-400 mt-2">
           Not a member?{" "}
-          <Link to="/auth/signup" className="text-blue-400 hover:underline">
+          <Link to="/auth/signup" className="text-blue-400 cursor-pointer hover:underline">
             Sign Up
           </Link>
         </p>

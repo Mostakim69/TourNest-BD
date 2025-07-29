@@ -56,7 +56,7 @@ const SocialLogin = () => {
         <button
           onClick={() => handleSocialSignIn(googleSignIn, "Google")}
           disabled={loading}
-          className="flex items-center gap-2 px-4 py-2 w-full max-w-[180px] bg-white text-gray-800 border border-gray-300 rounded-full hover:shadow-md transition duration-200 disabled:opacity-50"
+          className="flex items-center cursor-pointer gap-2 px-4 py-2 w-full max-w-[180px] bg-white text-gray-800 border border-gray-300 rounded-full hover:shadow-md transition duration-200 disabled:opacity-50"
         >
           <svg
             aria-label="Google logo"
