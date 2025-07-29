@@ -13,7 +13,7 @@ const AssignedTour = () => {
     `/bookings/guide/${userData?._id}`,
   );
 
-  console.log(data, "aasigned tour book AssignedTour.jsx", 10);
+  // console.log(data, "aasigned tour book AssignedTour.jsx", 10);
   // 🧠 Keep track of which booking to update
   const [bookingIdToUpdate, setBookingIdToUpdate] = useState(null);
   const [statusToUpdate, setStatusToUpdate] = useState(null);

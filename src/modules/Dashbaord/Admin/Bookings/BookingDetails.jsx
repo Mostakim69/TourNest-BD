@@ -18,7 +18,7 @@ const BookingDetails = () => {
     enabled: !!bookingId,
   });
 
-  console.log(bookingId, "bookingId BookingDetails.jsx", 14);
+  // console.log(bookingId, "bookingId BookingDetails.jsx", 14);
   if (isLoading) {
     return (
       <div className="min-h-screen flex justify-center items-center text-xl text-white animate-pulse">

@@ -65,7 +65,7 @@ export default function viteLoggerPlugin() {
         let body = "";
         req.on("data", (chunk) => (body += chunk));
         req.on("end", () => {
-          console.log("Received error log POST:", body); // <== Add this line for debug
+          // console.log("Received error log POST:", body); // <== Add this line for debug
 
           try {
             const { args } = JSON.parse(body);

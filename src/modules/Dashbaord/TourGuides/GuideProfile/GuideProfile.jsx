@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { axiosInstance } from "../../../../hooks/useAxiosSecure";
 
 const fetchGuideDetails = async (id) => {
-  console.log(id, "id GuideProfile.jsx", 6);
+  // console.log(id, "id GuideProfile.jsx", 6);
   const res = await axiosInstance.get(`tour-guide-requests/user/${id}`);
   return res.data?.data;
 };
@@ -24,7 +24,7 @@ export default function GuideProfile() {
     );
   }
 
-  console.log(data, "data GuideProfile.jsx", 15);
+  // console.log(data, "data GuideProfile.jsx", 15);
   if (isError || !data) {
     console.log(`error`, error);
     return (

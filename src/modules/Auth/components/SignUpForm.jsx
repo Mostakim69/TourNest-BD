@@ -34,7 +34,7 @@ const SignUpForm = () => {
 
     try {
       const res = await signupUser(email, password);
-      console.log(res, "SignUpForm.jsx", 35);
+      // console.log(res, "SignUpForm.jsx", 35);
       // ✅ Directly update Firebase user profile
       await updateProfile(auth?.currentUser, {
         displayName: name,

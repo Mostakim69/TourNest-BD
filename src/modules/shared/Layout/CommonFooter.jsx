@@ -71,7 +71,7 @@ const CommonFooter = () => {
     }
     setError('');
     // Simulate newsletter subscription API call
-    console.log('Subscribing:', email);
+    // console.log('Subscribing:', email);
     setEmail('');
     // Optionally, show a success message or integrate with an API
   };

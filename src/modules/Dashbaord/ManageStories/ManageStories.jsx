@@ -30,8 +30,8 @@ const ManageStories = () => {
     enabled: !!userData?.email,
   });
 
-  console.log(userData, "userdata ManageStories.jsx", 33);
-  console.log(stories, "stories ManageStories.jsx", 34);
+  // console.log(userData, "userdata ManageStories.jsx", 33);
+  // console.log(stories, "stories ManageStories.jsx", 34);
   const handleDelete = async (id) => {
     const result = await Swal.fire({
       title: "Delete this story?",

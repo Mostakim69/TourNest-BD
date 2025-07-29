@@ -82,7 +82,7 @@ const PackageDetails = () => {
         payload: bookingPayload,
       });
 
-      console.log(res, "booking PackageDetails.jsx", 81);
+      // console.log(res, "booking PackageDetails.jsx", 81);
       Swal.fire({
         icon: "success",
         title: "Booking Submitted!",

@@ -8,7 +8,7 @@ import { Link } from "react-router";
 const TourismAndGuides = () => {
   const { data: packages = [], loading } = useFetchData("packages/random");
 
-  console.log(packages, "TourismAndGuides.jsx", 7);
+  // console.log(packages, "TourismAndGuides.jsx", 7);
   return (
     <section className="px-4 py-10 max-w-7xl mx-auto">
       <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-4 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse">
