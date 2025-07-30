@@ -11,8 +11,7 @@ import HowItWorks from "./HowItWorks/HowItWorks.jsx";
 import WhyChooseUs from "./WhyChooseUs/WhyChooseUs.jsx";
 import CallToActionFull from "./CallToActionFull/CallToActionFull.jsx";
 import TrendingDestinations from "./TrendingDestinations/TrendingDestinations.jsx";
-import Packages from "../../Packages/Packages/Packages.jsx";
-import RandomGuides from "./RandomGuides/RandomGuides.jsx";
+import ReactTab from "./ReactTab/ReactTab.jsx";
 
 const Home = () => {
   return (
@@ -21,9 +20,8 @@ const Home = () => {
 
       <Banner />
       <Overview />
-      {/* <TourismAndGuides /> */}
-      <Packages apiEndpoint="packages/random" />
-      <RandomGuides />
+
+      <ReactTab/>
       <TrendingDestinations />
       <Stories apiEndpoint="stories" />
       <LiveStats />
