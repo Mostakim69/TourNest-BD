@@ -227,7 +227,7 @@ const AddPackage = () => {
         {/* Gallery URLs */}
         <div>
           <label className="label">Gallery URLs</label>
-          {["gallery.0", "gallery.1"].map((field, idx) => (
+          {["gallery.0", "gallery.1", "gallery.2"].map((field, idx) => (
             <div key={idx} className="mb-2">
               <input
                 {...register(field, {
