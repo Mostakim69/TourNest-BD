@@ -14,7 +14,7 @@ const ReactTab = () => {
 
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-white glow-text hover:scale-105 transition-transform duration-300">
+          <h2 className="text-3xl md:text-4xl font-bold glow-text hover:scale-105 text-gray-900 transition-transform duration-300">
             Explore Our Offerings
           </h2>
           <p className="mt-2 max-w-2xl mx-auto hover:text-gray-300 transition-colors duration-300">

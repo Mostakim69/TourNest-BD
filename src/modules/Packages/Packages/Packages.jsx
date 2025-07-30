@@ -10,14 +10,14 @@ const Packages = ({ apiEndpoint }) => {
 
   return (
     <section className="px-4 py-6 sm:py-8 md:py-10 max-w-7xl mx-auto">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center mb-4 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center mb-4 text-gray-900 bg-clip-text drop-shadow-xl glow-text animate-pulse">
         Our Featured Packages
       </h2>
       <p className="text-base sm:text-lg text-center mb-6 sm:mb-8 md:mb-10 max-w-3xl mx-auto">
         Our Featured Packages offer handpicked travel experiences across Bangladesh's most stunning destinations. Each package is crafted for comfort, adventure, and unforgettable memories.
       </p>
 
-      <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {loading ? (
           <div className="col-span-full flex justify-center items-center">
             <Spinner />
