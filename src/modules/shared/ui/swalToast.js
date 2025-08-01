@@ -21,3 +21,25 @@ export const swalSuccessToast = ({
     showConfirmButton,
   });
 };
+
+export const swalErrorToast = ({
+  title = "Oops!",
+  text = "Something went wrong.",
+  toast = true,
+  timer = 2000,
+  background = "#1e293b", // Slightly different dark shade
+  color = "#fff",
+  showConfirmButton = true,
+  icon = "error",
+} = {}) => {
+  Swal.fire({
+    icon,
+    title,
+    text,
+    toast,
+    timer,
+    background,
+    color,
+    showConfirmButton,
+  });
+};

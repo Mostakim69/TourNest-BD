@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const trendingSpots = [
   {
     name: "🌊 Saint Martin",
-    image: "https://i.pinimg.com/736x/cc/7b/38/cc7b389b5c840e39854cf76417a7116a.jpg",
+    image: "https://i.postimg.cc/NF7zRpcZ/cc7b389b5c840e39854cf76417a7116a.jpg",
     description:
       "A serene island in the Bay of Bengal, famous for crystal clear water, coral reefs, and calm vibes.",
   },
