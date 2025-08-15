@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import useFetchData from "../../../hooks/useFetchData";
 import Spinner from "../../shared/Layout/Spinner";
 import PackageCard from "./PackageCard";
@@ -9,9 +9,27 @@ const Packages = ({ apiEndpoint }) => {
   const location = useLocation();
   const isAllTripPage = location.pathname.toLowerCase().includes("all-trips");
   const [sortOrder, setSortOrder] = useState("default");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedTripType, setSelectedTripType] = useState("all");
 
-  // Function to sort packages based on selected order
-  const sortedPackages = [...packages].sort((a, b) => {
+  // Get unique trip types for filter dropdown
+  const tripTypes = useMemo(() => {
+    const types = new Set(packages.map((pkg) => pkg.tripType));
+    return ["all", ...types];
+  }, [packages]);
+
+  // Filter packages based on search query and trip type
+  const filteredPackages = packages.filter((pkg) => {
+    const matchesSearch = [pkg.title, pkg.tripType, pkg.location].some((field) =>
+      field?.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    const matchesTripType =
+      selectedTripType === "all" || pkg.tripType === selectedTripType;
+    return matchesSearch && matchesTripType;
+  });
+
+  // Sort filtered packages
+  const sortedPackages = [...filteredPackages].sort((a, b) => {
     if (sortOrder === "priceAsc") {
       return a.price - b.price;
     } else if (sortOrder === "priceDesc") {
@@ -29,23 +47,47 @@ const Packages = ({ apiEndpoint }) => {
         Our Featured Packages offer handpicked travel experiences across Bangladesh's most stunning destinations. Each package is crafted for comfort, adventure, and unforgettable memories.
       </p>
 
-      {/* Sorting Dropdown */}
-      <div className="flex justify-end mb-4">
-        <select
-          className="select select-bordered w-full max-w-xs"
-          value={sortOrder}
-          onChange={(e) => setSortOrder(e.target.value)}
-        >
-          <option value="default">Default Sort</option>
-          <option value="priceAsc">Price: Low to High</option>
-          <option value="priceDesc">Price: High to Low</option>
-        </select>
+      {/* Search, Sort, and Filter Controls */}
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
+        <input
+          type="text"
+          placeholder="Search by title, type, or location..."
+          className="input input-bordered w-full max-w-xs"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+        <div className="flex gap-4">
+          <select
+            className="select select-bordered w-full max-w-xs"
+            value={selectedTripType}
+            onChange={(e) => setSelectedTripType(e.target.value)}
+          >
+            {tripTypes.map((type) => (
+              <option key={type} value={type}>
+                {type === "all" ? "All Trip Types" : type}
+              </option>
+            ))}
+          </select>
+          <select
+            className="select select-bordered w-full max-w-xs"
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value)}
+          >
+            <option value="default">Default Sort</option>
+            <option value="priceAsc">Price: Low to High</option>
+            <option value="priceDesc">Price: High to Low</option>
+          </select>
+        </div>
       </div>
 
       <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {loading ? (
           <div className="col-span-full flex justify-center items-center">
             <Spinner />
+          </div>
+        ) : sortedPackages.length === 0 ? (
+          <div className="col-span-full text-center text-gray-500">
+            No packages found matching your criteria.
           </div>
         ) : (
           sortedPackages.map((pkg) => <PackageCard key={pkg._id} pkg={pkg} />)
