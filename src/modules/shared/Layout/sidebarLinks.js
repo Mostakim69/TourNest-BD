@@ -1,6 +1,7 @@
 // ✅ Role-based sidebar links
 export const adminLinks = [
   { name: "Manage Profile", path: "/dashboard/manage-profile" },
+  { name: "Overview", path: "/dashboard/overview" },
   { name: "Manage Users", path: "/dashboard/admin/manage-users" },
   { name: "Add Package", path: "/dashboard/admin/add-package" },
   { name: "Manage Candidates", path: "/dashboard/admin/candidates" },
@@ -10,6 +11,7 @@ export const adminLinks = [
 
 export const guideLinks = [
   { name: "Manage Profile", path: "/dashboard/manage-profile" },
+  { name: "Overview", path: "/dashboard/overview" },
   { name: "My Assigned Tours", path: "/dashboard/guide/my-assigned-tours" },
   {
     name: "Add Stories",
@@ -20,6 +22,7 @@ export const guideLinks = [
 
 export const touristLinks = [
   { name: "Manage Profile", path: "/dashboard/manage-profile" },
+  { name: "Overview", path: "/dashboard/overview" },
   { name: "My Bookings", path: "/dashboard/my-bookings" },
   {
     name: "Add Stories",

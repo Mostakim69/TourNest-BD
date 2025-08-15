@@ -9,6 +9,7 @@ import AllPayments from "./Admin/Payments/AllPayments";
 import DashboardLayout from "./DashboardLayout";
 import ManageProfile from "./ManageProfile/ManageProfile";
 import ManageStories from "./ManageStories/ManageStories";
+import Overview from "./Overview/Overview";
 import AssignedTour from "./TourGuides/AssignedTour/AssignedTour";
 import MyBookings from "./Tourist/Bookings/MyBookings";
 import JoinTourGuide from "./Tourist/JoinTourGuide/JoinTourGuide";
@@ -44,6 +45,10 @@ const dashbourdRoutes = {
     {
       path: "manage-profile",
       element: <ManageProfile />,
+    },
+    {
+      path: "overview",
+      element: <Overview />,
     },
 
     {
