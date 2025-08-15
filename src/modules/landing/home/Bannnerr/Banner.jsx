@@ -29,7 +29,7 @@ const Banner = () => {
   const backgroundImages = [
     'https://i.postimg.cc/wvLSTgPp/premium-photo-1754344863754-85931a720540.avif',
     'https://i.postimg.cc/Y07TvTKm/photo-1629119987285-266f62d8dee2.avif',
-    'https://i.postimg.cc/QNgR2N1g/f44b110f69309ed084e37a4ed3df465d.jpg',
+    'https://i.postimg.cc/0Qx7RYJP/pexels-abd-nimit-998903.jpg',
   ];
 
   const styleRef = useRef(false);
@@ -56,8 +56,8 @@ const Banner = () => {
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       pagination={{ clickable: true }}
       navigation
-      className="w-full"
-      style={{ aspectRatio: '16 / 9', maxHeight: '75vh' }}
+      className="w-full overflow-hidden"
+      style={{ height: "100vh", maxHeight: "480px" }}
     >
       {backgroundImages.map((image, index) => (
         <SwiperSlide key={index}>
@@ -80,10 +80,10 @@ const Banner = () => {
               </p>
               <div className="mb-2 max-w-md mx-auto sm:max-w-lg">
                 <p className="flex items-center space-x-2 mb-2 animate-text animate-text-delay-2 text-sm sm:text-base md:text-lg">
-                  <span>✅ Create & Join Study Groups</span>
+                  <span>✅ Smart Trip Booking System</span>
                 </p>
                 <p className="flex items-center space-x-2 animate-text animate-text-delay-3 text-sm sm:text-base md:text-lg">
-                  <span>✅ Submit and Grade Assignments</span>
+                  <span>✅ Secure Online Payment & Support</span>
                 </p>
               </div>
               <button
