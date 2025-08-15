@@ -12,7 +12,7 @@ const Navbar = () => {
   const { user } = useAuth();
 
   return (
-    <motion.nav {...topToBottom} className="navbar px-10 max-container ">
+    <motion.nav {...topToBottom} className="navbar px-10 pr-14 max-container ">
       {/* Left Section */}
       <div className="navbar-start">
         <div className="dropdown dropdown-right lg:hidden">
@@ -37,7 +37,7 @@ const Navbar = () => {
             className="menu dropdown-content mt-3 p-2 shadow-xl 
             bg-[#1a1a2e] text-white rounded-xl border border-[#333] min-w-[180px] z-[999]"
           >
-            {navbarLinks()}
+            {navbarLinks(user)} {/* Pass user to navbarLinks */}
           </ul>
         </div>
         <Brand />
@@ -46,7 +46,7 @@ const Navbar = () => {
       {/* Center Section */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal gap-2 text-white">
-          {navbarLinks()}
+          {navbarLinks(user)} {/* Pass user to navbarLinks */}
         </ul>
       </div>
 
@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <DropDown>
               <Avatar />
-              </DropDown>
+            </DropDown>
             <Signout>
               <button className="px-4 py-2 rounded-full bg-[#00BFFF] text-black font-semibold hover:scale-105 hover:shadow-[0_0_12px_#00FF9C] transition-all duration-200">
                 Sign Out

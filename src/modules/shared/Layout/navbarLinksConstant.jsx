@@ -9,7 +9,6 @@ export const navItems = [
     name: "All Trips",
     path: "/all-trips",
   },
-
   {
     name: "Community",
     path: "/community",
@@ -24,14 +23,17 @@ export const navItems = [
   },
 ];
 
-const navbarLinks = () => {
-  return navItems.map((item) => {
-    return (
-      <li key={item.path}>
-        <Link to={item.path}>{item.name}</Link>
-      </li>
-    );
-  });
+const navbarLinks = (user) => {
+  // Filter navItems to exclude "Dashboard" if user is not logged in
+  const filteredItems = user
+    ? navItems
+    : navItems.filter((item) => item.name !== "Dashboard");
+
+  return filteredItems.map((item) => (
+    <li key={item.path}>
+      <Link to={item.path}>{item.name}</Link>
+    </li>
+  ));
 };
 
 export default navbarLinks;
