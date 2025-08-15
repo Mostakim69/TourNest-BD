@@ -1,79 +1,114 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+const styles = `
+  .animate-text {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .swiper-slide-active .animate-text {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .animate-text-delay-1 { transition-delay: 0.2s; }
+  .animate-text-delay-2 { transition-delay: 0.4s; }
+  .animate-text-delay-3 { transition-delay: 0.6s; }
+  .animate-text-delay-4 { transition-delay: 0.8s; }
+`;
 
 const Banner = () => {
+  const backgroundImages = [
+    'https://i.postimg.cc/wvLSTgPp/premium-photo-1754344863754-85931a720540.avif',
+    'https://i.postimg.cc/Y07TvTKm/photo-1629119987285-266f62d8dee2.avif',
+    'https://i.postimg.cc/QNgR2N1g/f44b110f69309ed084e37a4ed3df465d.jpg',
+  ];
+
+  const styleRef = useRef(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!styleRef.current) {
+      const styleSheet = document.createElement('style');
+      styleSheet.textContent = styles;
+      document.head.appendChild(styleSheet);
+      styleRef.current = true;
+    }
+  }, []);
+
+  const handleCreateClick = () => {
+    navigate('/assignments');
+  };
+
   return (
-    <div className="flex flex-col items-start justify-center px-4 sm:px-6 md:px-16 lg:px-24 xl:px-32 text-white bg-[url('/src/assets/bannerImage01.jpg')] bg-no-repeat bg-cover bg-center h-screen">
-      <p className="bg-[#49B9FF]/50 px-3 py-1 rounded-full mt-12 sm:mt-16 md:mt-20 text-sm sm:text-base">The Ultimate Travel Experience</p>
-      <h1 className="font-playfair text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] leading-tight md:leading-[1.2] font-bold md:font-extrabold max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl mt-3 sm:mt-4">Journey Through the Heart of Bangladesh</h1>
-      <p className="max-w-xs sm:max-w-md md:max-w-lg lg:max-w-130 mt-2 text-sm sm:text-base md:text-lg">Discover hidden gems, vibrant culture & unforgettable adventures with TourNest BD.</p>
-      <form className="bg-white text-gray-500 rounded-lg px-4 sm:px-6 py-4 mt-4 sm:mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto max-w-full sm:max-w-3xl">
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-gray-800 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
-            </svg>
-            <label htmlFor="destinationInput" className="text-sm sm:text-base">Destination</label>
-          </div>
-          <input
-            list="destinations"
-            id="destinationInput"
-            type="text"
-            className="w-full rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none"
-            placeholder="Type here"
-            required
-          />
-        </div>
+    <Swiper
+      modules={[Autoplay, Pagination, Navigation]}
+      spaceBetween={0}
+      slidesPerView={1}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      pagination={{ clickable: true }}
+      navigation
+      className="w-full"
+      style={{ aspectRatio: '16 / 9', maxHeight: '75vh' }}
+    >
+      {backgroundImages.map((image, index) => (
+        <SwiperSlide key={index}>
+          <div
+            className="relative w-full h-full object-cover"
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          >
+            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-12 lg:px-20 text-white">
+              <h1 className="mb-5 font-extrabold animate-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                <span className="text-blue-400">Journey Through the</span>  Heart of Bangladesh.
+              </h1>
+              <p className="mb-4 font-semibold animate-text animate-text-delay-1 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
+                Discover hidden gems, vibrant culture & unforgettable adventures with TourNest BD.
+              </p>
+              <div className="mb-2 max-w-md mx-auto sm:max-w-lg">
+                <p className="flex items-center space-x-2 mb-2 animate-text animate-text-delay-2 text-sm sm:text-base md:text-lg">
+                  <span>✅ Create & Join Study Groups</span>
+                </p>
+                <p className="flex items-center space-x-2 animate-text animate-text-delay-3 text-sm sm:text-base md:text-lg">
+                  <span>✅ Submit and Grade Assignments</span>
+                </p>
+              </div>
+              <button
+                onClick={handleCreateClick}
+                className="mt-4 animate-text btn btn-primary animate-text-delay-4 px-6 py-3 text-sm sm:text-base md:text-lg rounded text-white transition"
+              >
+                👉 View All Tour Places
+              </button>
+            </div>
 
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-gray-800 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
-            </svg>
-            <label htmlFor="checkIn" className="text-sm sm:text-base">Check in</label>
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+              <svg
+                className="animate-bounce w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
           </div>
-          <input
-            id="checkIn"
-            type="date"
-            className="w-full rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none"
-          />
-        </div>
-
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-gray-800 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
-            </svg>
-            <label htmlFor="checkOut" className="text-sm sm:text-base">Check out</label>
-          </div>
-          <input
-            id="checkOut"
-            type="date"
-            className="w-full rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none"
-          />
-        </div>
-
-        <div className="flex-1 min-w-0 max-w-[80px] sm:max-w-[100px]">
-          <div className="flex items-center gap-2">
-            <label htmlFor="guests" className="text-sm sm:text-base">Guests</label>
-          </div>
-          <input
-            min={1}
-            max={4}
-            id="guests"
-            type="number"
-            className="w-full rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none"
-            placeholder="0"
-          />
-        </div>
-
-        <button className="flex items-center justify-center gap-1 rounded-md bg-black py-2 sm:py-3 px-4 text-white text-sm sm:text-base cursor-pointer w-full sm:w-auto">
-          <svg className="w-4 h-4 text-white flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
-          </svg>
-          <span>Search</span>
-        </button>
-      </form>
-    </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
