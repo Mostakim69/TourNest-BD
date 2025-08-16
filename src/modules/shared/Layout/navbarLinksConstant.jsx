@@ -2,23 +2,23 @@ import { Link } from "react-router";
 
 export const navItems = [
   {
-    name: "Home",
+    name: "🏠 Home",
     path: "/",
   },
   {
-    name: "All Trips",
+    name: "🧳 All Trips",
     path: "/all-trips",
   },
   {
-    name: "Community",
+    name: "👥 Community",
     path: "/community",
   },
   {
-    name: "About Us",
+    name: "ℹ️ About Us",
     path: "/about-us",
   },
   {
-    name: "Dashboard",
+    name: "📊 Dashboard",
     path: "/dashboard",
   },
 ];
