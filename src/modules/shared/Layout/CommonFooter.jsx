@@ -24,8 +24,8 @@ const CommonFooter = () => {
   ];
 
   const legalLinks = [
-    { name: 'Privacy', url: '/' },
-    { name: 'Terms', url: '/' },
+    { name: 'Privacy', url: '/privacy' },
+    { name: 'Terms', url: '/privacy' },
   ];
 
   const handleNewsletterSubmit = (e) => {
