@@ -20,10 +20,10 @@ const Signin = () => {
         className="max-w-xl mx-auto text-center mb-10"
         {...topToBottom}
       >
-        <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-indigo-400 via-purple-500 to-blue-400 bg-clip-text text-transparent drop-shadow-md">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900  bg-clip-text animate-pulse drop-shadow-md">
           TourNest BD connects explorers with unforgettable journeys.
         </h2>
-        <p className="mt-3 text-sm text-gray-300">
+        <p className="mt-3 text-lg text-gray-300">
           Discover breathtaking destinations, trusted tour guides, and tailored
           travel experiences — all in one platform.
         </p>
