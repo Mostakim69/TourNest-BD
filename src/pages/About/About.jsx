@@ -22,6 +22,7 @@ const About = () => {
     },
   ];
 
+  // data
   const contactInfo = [
     { label: 'Location', value: 'Rajshahi, Bangladesh' },
     { label: 'Phone', value: '+8801821023369' },
