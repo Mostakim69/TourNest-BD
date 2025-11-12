@@ -7,7 +7,7 @@ import { darkSwal } from "../../../hooks/usePostData";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const SocialLogin = () => {
-  const { googleSignIn, githubSignIn } = useAuth(); // Make sure githubSignIn is added in useAuth.js
+  const { googleSignIn, githubSignIn } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const axiosSecure = useAxiosSecure();
@@ -89,23 +89,23 @@ const SocialLogin = () => {
         </button>
 
         {/* GitHub */}
-        {/* <button
+         <button
           onClick={() => handleSocialSignIn(githubSignIn, "GitHub")}
           disabled={loading}
           className="flex items-center gap-2 px-4 py-2 w-full max-w-[180px] bg-neutral text-white rounded-full hover:bg-neutral-focus transition duration-200 disabled:opacity-50"
         >
           <Github size={18} />
           <span className="text-sm font-medium">GitHub</span>
-        </button> */}
+        </button>
 
         {/* Facebook (Optional placeholder only) */}
-        {/* <button
+        <button
           disabled
           className="flex items-center gap-2 px-4 py-2 w-full max-w-[180px] bg-blue-600 text-white rounded-full cursor-not-allowed opacity-50"
         >
           <Facebook size={18} />
           <span className="text-sm font-medium">Facebook</span>
-        </button> */}
+        </button> 
       </div>
     </div>
   );
