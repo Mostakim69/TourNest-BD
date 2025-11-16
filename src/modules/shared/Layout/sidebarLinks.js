@@ -1,4 +1,4 @@
-// ✅ Role-based sidebar links repo cheack
+// ✅ Role-based sidebar linksss
 export const adminLinks = [
   { name: "📊 Overview", path: "/dashboard/overview" },
   { name: "👤 Manage Profile", path: "/dashboard/manage-profile" },
