@@ -71,9 +71,9 @@ export default function Overview() {
               className="relative overflow-hidden p-6 bg-gradient-to-br from-[#1a1c2b] to-[#11131f] border border-[#2d2f43] rounded-2xl shadow-lg hover:shadow-2xl transition-all"
               data-aos="fade-up-right"
             >
-              <div className="absolute inset-0 bg-[#00FFC6] opacity-0 group-hover:opacity-10 blur-xl rounded-2xl pointer-events-none transition-all" />
+              <div className="absolute inset-0 bg-blue-400 opacity-0 group-hover:opacity-10 blur-xl rounded-2xl pointer-events-none transition-all" />
               <div className="group flex flex-col items-center">
-                <div className="mb-4 p-4 rounded-full bg-[#1e293b] text-[#00FFC6] group-hover:animate-pulse">
+                <div className="mb-4 p-4 rounded-full bg-[#1e293b] text-blue-400 group-hover:animate-pulse">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">

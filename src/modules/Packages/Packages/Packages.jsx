@@ -99,7 +99,7 @@ const Packages = ({ apiEndpoint }) => {
       {isAllTripPage || (
         <div className="flex justify-center mt-6 sm:mt-8 md:mt-10">
           <Link
-            className="btn btn-soft btn-info rounded-full px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base"
+            className="btn btn-soft rounded-full px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base"
             to="/all-trips"
           >
             View All Packages
