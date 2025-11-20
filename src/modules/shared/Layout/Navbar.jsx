@@ -43,7 +43,6 @@ const Navbar = () => {
         <Brand />
       </div>
 
-      /repo check
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal gap-2 text-white">
           {navbarLinks(user)} {/* Pass user to navbarLinks */}

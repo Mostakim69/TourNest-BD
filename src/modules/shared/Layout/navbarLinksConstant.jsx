@@ -1,39 +1,54 @@
 import { Link } from "react-router";
+import { Home, Map, Users, Info, LayoutDashboard } from "lucide-react"; // <-- icons import
 
 export const navItems = [
   {
-    name: "🏠 Home",
+    name: "Home",
     path: "/",
+    icon: Home,
   },
   {
-    name: "🧳 All Trips",
+    name: "All Trips",
     path: "/all-trips",
+    icon: Map,
   },
   {
-    name: "👥 Community",
+    name: "Community",
     path: "/community",
+    icon: Users,
   },
   {
-    name: "ℹ️ About Us",
+    name: "About Us",
     path: "/about-us",
+    icon: Info,
   },
   {
-    name: "📊 Dashboard",
+    name: "Dashboard",
     path: "/dashboard",
+    icon: LayoutDashboard,
   },
 ];
 
 const navbarLinks = (user) => {
-  // Filter navItems to exclude "Dashboard" if user is not logged in
   const filteredItems = user
     ? navItems
     : navItems.filter((item) => item.name !== "Dashboard");
 
-  return filteredItems.map((item) => (
-    <li key={item.path}>
-      <Link to={item.path}>{item.name}</Link>
-    </li>
-  ));
+  return filteredItems.map((item) => {
+    const Icon = item.icon;
+
+    return (
+      <li key={item.path}>
+        <Link
+          to={item.path}
+          className="flex items-center gap-2 hover:text-[#00FF9C] transition-all"
+        >
+          <Icon size={18} /> {/* icon */}
+          {item.name}
+        </Link>
+      </li>
+    );
+  });
 };
 
 export default navbarLinks;
