@@ -10,12 +10,18 @@ const Brand = () => {
         onClick={() => navigate("/")}
         className="text-xl ml-2 flex items-center gap-3 cursor-pointer font-bold"
         animate={{
-          color: ["#ff5733", "#33ff33", "#8a33ff", "#ce9733"],
-          transition: { duration: 9, repeat: Infinity },
+          color: ["#000000", "#ffffff", "#3380ff"], // black, white, blue
+          transition: { duration: 6, repeat: Infinity }, // duration 6 sec, repeat infinitely
         }}
       >
-        <img src="https://i.postimg.cc/mDZvzcKn/add5bd76e80a208f85d556937ebe8abe.jpg" alt="logo" className='h-6 rounded-full md:h-7' />
-        <span className="hidden md:inline-block text-xl font-bold ml-2">TourNest BD</span>
+        <img
+          src="https://i.postimg.cc/mDZvzcKn/add5bd76e80a208f85d556937ebe8abe.jpg"
+          alt="logo"
+          className="h-6 rounded-full md:h-7"
+        />
+        <span className="hidden md:inline-block text-xl font-bold ml-2">
+          TourNest BD
+        </span>
       </motion.button>
     </div>
   );
