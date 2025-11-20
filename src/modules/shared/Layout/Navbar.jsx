@@ -37,13 +37,13 @@ const Navbar = () => {
             className="menu dropdown-content mt-3 p-2 shadow-xl 
             bg-[#1a1a2e] text-white rounded-xl border border-[#333] min-w-[180px] z-[999]"
           >
-            {navbarLinks(user)} {/* Pass user to navbarLinks */}
+            {navbarLinks(user)} 
           </ul>
         </div>
         <Brand />
       </div>
 
-      {/* Center Section */}
+      /repo check
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal gap-2 text-white">
           {navbarLinks(user)} {/* Pass user to navbarLinks */}
