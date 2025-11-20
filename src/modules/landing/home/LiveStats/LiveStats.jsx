@@ -28,7 +28,7 @@ const LiveStats = () => {
       >
         {stats.map(({ label, value, suffix }, i) => (
           <div key={label} className="space-y-2" data-aos="flip-right">
-            <p className="text-5xl font-extrabold bg-gradient-to-r from-sky-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent drop-shadow-lg">
+            <p className="text-5xl font-extrabold bg-blue-500 bg-clip-text text-transparent drop-shadow-lg">
               {inView ? (
                 <CountUp
                   end={value}

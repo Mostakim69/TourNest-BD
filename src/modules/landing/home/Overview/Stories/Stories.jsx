@@ -26,7 +26,7 @@ const Stories = ({ apiEndpoint }) => {
   return (
     <section className="px-4 py-16" data-aos="fade-up-left">
       <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-14 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse">
-        🌌 What's our community share!
+        What's our community share!
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-7xl mx-auto">
@@ -39,7 +39,7 @@ const Stories = ({ apiEndpoint }) => {
       {!isStoriesPage && (
         <div className="text-center mt-8">
           <Link
-            className="inline-block px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-500 transition"
+            className="btn btn-soft rounded-full px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base"
             to="/community"
           >
             View All Stories
