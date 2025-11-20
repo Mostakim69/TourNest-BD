@@ -1,4 +1,2 @@
-[2025-11-20T04:41:02.822Z] Uncaught ReferenceError: navItems is not defined http://localhost:5173/src/modules/shared/Layout/navbarLinksConstant.jsx?t=1763613661929 3 43
-[2025-11-20T04:42:20.771Z] Uncaught Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: <FaHome />. Did you accidentally export a JSX literal instead of a component?
-
-Check the render method of `Navbar`. http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=51f66057 3216 30
+[2025-11-20T04:54:17.825Z] Uncaught ReferenceError: isActive is not defined http://localhost:5173/src/modules/shared/Layout/navbarLinksConstant.jsx?t=1763614456298 36 17
+[2025-11-20T04:54:26.226Z] Uncaught ReferenceError: isActive is not defined http://localhost:5173/src/modules/shared/Layout/navbarLinksConstant.jsx?t=1763614456298 36 17
