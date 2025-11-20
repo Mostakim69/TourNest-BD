@@ -34,7 +34,8 @@ const CallToActionFull = () => {
           transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
           className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed"
         >
-          ✈️ Uncover hidden gems, connect with expert guides, and craft unforgettable adventures with TourNest BD.
+          ✈️ Uncover hidden gems, connect with expert guides, and craft
+          unforgettable adventures with TourNest BD.
         </motion.p>
 
         <motion.div
@@ -43,8 +44,8 @@ const CallToActionFull = () => {
           transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
         >
           <Link
-            to="/packages"
-            className="inline-block bg-gradient-to-r from-teal-400 to-blue-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg shadow-lg hover:scale-105 hover:shadow-[0_0_15px_rgba(16,185,129,0.5)] transition-all duration-300"
+            to="/all-trips"
+            className="inline-block bg-gradient-to-r from-blue-400 to-blue-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg shadow-lg hover:scale-105 hover:shadow-[0_0_15px_rgba(16,185,129,0.5)] transition-all duration-300"
           >
             🌍 Start Your Adventure
           </Link>
