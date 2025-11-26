@@ -145,7 +145,7 @@ const Testimonials = () => {
 
       <section className="py-12 ">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-14 text-gray-100 drop-shadow-xl">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-14 text-gray-900 bg-clip-text drop-shadow-xl animate-pulse">
             What Our Users Say
           </h2>
 
